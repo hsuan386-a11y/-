@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🍠 Q Q球職人手作｜甜的剛好，心的溫度</title>
+
+<meta property="og:title" content="🍠 Q Q球職人手作｜甜的剛好，心的溫度">
+<meta property="og:description" content="天氣轉涼的那天，我又聞到了那股香氣。職人手作的溫度，從淡水街頭開始。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./hero.png">
+
+<style>
+:root{
+  --bg:#fffaf5; --text:#3a2d1f; --muted:#6b4a2a;
+  --accent:#d87b33; --accent2:#8b5a00; --brand:#ff9e3d;
+}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text); line-height:1.85;
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Hero */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:url('./hero.png') center/cover no-repeat fixed;
+  overflow:hidden;text-align:center;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:rgba(0,0,0,0.25);
+}
+.hero .content{
+  position:relative;z-index:2;max-width:920px;
+  color:#fff;text-shadow:0 3px 10px rgba(0,0,0,.5);
+  animation:fadeInUp 1.8s ease forwards;
+  opacity:0;
+}
+.hero h1{
+  font-size:clamp(26px,6vw,50px);
+  font-weight:800;margin:0;
+  color:#fffbea;
+}
+.hero p{
+  font-size:clamp(15px,2.5vw,20px);
+  margin-top:10px;color:#fff9e8;
+}
+.cta{margin-top:18px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{background:linear-gradient(180deg,#ffb86b,#ff9e3d);border:0;color:#fff;font-weight:700;padding:10px 16px;border-radius:12px;cursor:pointer;box-shadow:0 6px 18px rgba(255,150,50,.25)}
+.btn.secondary{background:transparent;border:2px solid rgba(255,255,255,.6);color:#fff}
+
+/* Story content */
+.wrap{max-width:960px;margin:0 auto;padding:50px 20px}
+h2{color:var(--accent);font-size:clamp(18px,2.8vw,28px)}
+h3{color:var(--muted);margin:16px 0 6px}
+p{font-size:clamp(14px,1.8vw,16px);margin:6px 0 10px}
+.paper{
+  background:#fff;border-radius:12px;padding:24px;margin-bottom:20px;
+  box-shadow:0 10px 24px rgba(58,45,31,.08);
+  opacity:0;transform:translateY(24px);
+  transition:all .6s ease;
+}
+.paper.visible{opacity:1;transform:translateY(0)}
+
+.share{display:flex;gap:10px;justify-content:center;margin:24px 0;flex-wrap:wrap}
+.share a{display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;font-size:14px;color:#fff}
+.fb{background:#1877f2}.ig{background:#ee2a7b}.line{background:#06c755}.copy{background:#8b5a00}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:10px;text-align:center;font-size:14px;background:rgba(255,250,240,.8);backdrop-filter:blur(6px)}
+.sticky .brand{font-weight:700;color:var(--accent)}
+
+/* 返回頂端 */
+.to-top{
+  position:fixed;right:14px;bottom:70px;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;font-weight:800;border:none;
+  display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 20px rgba(255,150,50,.25);
+  opacity:0;transform:translateY(12px);transition:all .3s ease;
+}
+.to-top.show{opacity:1;transform:translateY(0)}
+
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="content">
+    <h1>🍠 Q Q球職人手作｜甜的剛好，心的溫度</h1>
+    <p>天氣轉涼的那天，我又聞到了那股香氣。</p>
+    <div class="cta">
+      <button class="btn" id="readStory">看完整故事</button>
+      <button class="btn secondary" id="shareBtn">分享</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="paper" id="intro">
+    <h2>🔸前言／創作說明</h2>
+    <p>本作品為個人設計與文案練習。主題「Q Q球職人手作」為虛構品牌，非真實商業營運。目的在於探索「職人精神 × 手作溫度 × 敘事美學」的創作呈現。希望這份作品，能為熱愛品牌故事與手作文化的你，帶來一點靈感與暖意。</p>
+  </section>
+
+  <section class="paper">
+    <h2>🍠 品牌故事</h2>
+    <h3>01｜天氣轉涼的那天</h3>
+    <p>空氣開始變涼，淡水街頭的風多了幾分溫柔。就在轉角，一股甜香穿過人群。那是剛起鍋的地瓜球——金黃、滾燙，像一顆顆小小的太陽，在油鍋裡跳舞。</p>
+    <p>我忍不住停下腳步，看著它們彈跳的樣子。每一顆都像有生命。那一口咬下去，外酥內 Q 的香甜，不只讓嘴角上揚，也讓心暖了一下。</p>
+  </section>
+
+  <section class="paper">
+    <h3>02｜不只是地瓜球</h3>
+    <p>那天，我遇到一位職人。他笑著說：「我不是在炸地瓜，我是在讓它變成幸福。」原來，他每天清晨親自挑選地瓜、手揉麵糰、掌控油溫。他追求的，不是「多快能賣完」，而是那一顆——「剛剛好」的 Q。</p>
+  </section>
+
+  <section class="paper">
+    <h3>03｜手的溫度</h3>
+    <p>在 Q Q球職人手作，每一顆地瓜球都由雙手製成。從揉捏、搓圓、下鍋、起鍋——每一個瞬間，都有經驗的溫度。機器能做出形狀，但做不出靈魂。</p>
+  </section>
+
+  <section class="paper">
+    <h3>04｜甜的剛好，心的溫度</h3>
+    <p>一口地瓜球，吃進嘴裡的，是職人的用心。我們不追求華麗，也不靠噱頭；只希望，當你吃到那顆 Q 的瞬間，能感受到一點溫柔，一點生活的甜。這，就是「Q Q球職人手作」想傳遞的味道——甜的剛好，心的溫度。</p>
+  </section>
+
+  <section class="paper">
+    <h2>📘 製作資訊</h2>
+    <p>📍 本作品為設計練習，非商業用途<br>
+    ✍️ 文字 × 故事 × 品牌敘事 練習企劃<br>
+    © 2025 HSUAN~ × ChatGPT</p>
+  </section>
+
+  <section class="paper" id="share">
+    <div class="share">
+      <a class="fb" href="#" id="shareFB">Facebook</a>
+      <a class="ig" href="#" id="shareIG">Instagram</a>
+      <a class="line" href="#" id="shareLINE">LINE</a>
+      <a class="copy" href="#" id="copyLink">複製連結</a>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:13px">把故事分享給朋友：香氣與溫度，會在轉角遇見你。</p>
+  </section>
+</main>
+
+<div class="sticky"><span class="brand">🍠 Q Q球職人手作</span>｜甜的剛好，心的溫度</div>
+<button class="to-top" id="toTop">⬆️</button>
+
+<script>
+// reveal
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.paper').forEach(el=>obs.observe(el));
+
+// scroll
+document.getElementById('readStory').onclick=()=>document.getElementById('intro').scrollIntoView({behavior:'smooth'});
+
+// share
+const url=location.href,title="🍠 Q Q球職人手作｜甜的剛好，心的溫度";
+document.getElementById('shareBtn').onclick=()=>navigator.share?navigator.share({title,url}):alert('此瀏覽器不支援分享');
+document.getElementById('shareFB').onclick=e=>{e.preventDefault();window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url))};
+document.getElementById('shareIG').onclick=e=>{e.preventDefault();alert('Instagram 不支援網頁直接分享，請複製連結貼上。')};
+document.getElementById('shareLINE').onclick=e=>{e.preventDefault();window.open('https://line.me/R/msg/text/?'+encodeURIComponent(title+'\\n'+url))};
+document.getElementById('copyLink').onclick=async e=>{e.preventDefault();await navigator.clipboard.writeText(url);alert('已複製連結！')};
+
+// to top
+const topBtn=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{topBtn.classList.toggle('show',window.scrollY>400)});
+topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
